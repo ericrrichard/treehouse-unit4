@@ -58,6 +58,7 @@ button {
   -o-transition: var(--transition);
   transition: var(--transition);
   cursor: pointer;
+  box-shadow: 5px -5px;
 }
 
 #btn__reset {
@@ -109,6 +110,11 @@ button {
 
 
 
+@keyframes keyshow {
+  from {background-color: var(--color-neutral-light);}
+  to {background-color: #4ac0d5}
+}
+
 .show {
   color: #fff;
   background-color: #4ac0d5;
@@ -119,7 +125,8 @@ button {
   margin-right: 2px;
   border-radius: 5px;
   -webkit-animation-duration: .5s;
-  animation-duration: .5s;
+  animation-name: keyshow;
+  animation-duration: 2s;
 }
 
 
@@ -202,3 +209,9 @@ button {
 .lose a {
   color: var(--color-lose);
 }
+
+#qwerty {
+    border: black 3px solid;
+    border-radius: 5px
+}
+
