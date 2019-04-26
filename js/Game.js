@@ -48,9 +48,14 @@ class Game {
 	let $lives = $( "#scoreboard li" );
 	let $lifeToRemove = $lives.eq( this.missed );
 	let $imageToReplace = $lifeToRemove.children().first();
+
+	
 	$imageToReplace.attr( "src", "images/lostHeart.png" );
 	$imageToReplace.attr( "alt", "Missed Heart Icon" );
-    
+
+	// Delay and then drop the heart off the screen
+	$imageToReplace.delay( 750 ).slideUp();
+	
 	this.missed++;
 	if ( this.missed === this.maxMisses ) {
 	    this.gameOver();
