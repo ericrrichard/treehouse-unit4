@@ -8,4 +8,12 @@ $( "#btn__reset" ).click( () => { myGame = new Game(); myGame.startGame(); } );
 
 $( "#qwerty" ).on( "click", ".key", (event) => myGame.handleInteraction( event ) );
 
+document.addEventListener(
+    'keypress',
+    ( event ) =>
+	{
+	    $key = $( "#qwerty button.key." + event.key );
+	    $key.click();
+	}
+)
 
