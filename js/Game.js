@@ -24,7 +24,7 @@ class Game {
 
 	// Get rid of the overlay
 	let $startScreen = $( "#overlay" );
-	$startScreen.hide();
+	$startScreen.fadeOut( 1000 );
 
 
 	// Its possible there was a previous game played, so clean up
@@ -69,6 +69,7 @@ class Game {
 	let $lives = $( "#scoreboard li img" );
 	$lives.attr( "src", "images/liveHeart.png" );
 	$lives.attr( "alt", "Heart Icon" );
+	$lives.show();
     
 	this.missed = 0;
     }
